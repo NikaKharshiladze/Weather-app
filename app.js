@@ -11,6 +11,13 @@ const kelvinToDegrees = function (kelvin) {
   return kelvin - 273;
 };
 
+const renderError = function (err) {
+  const errMsg = document.createElement("div");
+  errMsg.innerHTML = `<h1>${err.message}</h1>`;
+  appContainer.append(errMsg);
+  errMsg.classList.add("errMsg");
+};
+
 const renderWeather = function (weatherData) {
   const html = ` <div class="results-container">
      <img id="weather-icon" src="./assets/03_iday.svg" alt="Weather icon" />
@@ -35,8 +42,9 @@ const renderWeather = function (weatherData) {
 const getWeatherData = async function () {
   try {
     const location = await getLocation();
-    console.log(location);
     const { latitude, longitude } = location.coords;
+
+    //Using City name
     //  `https://api.openweathermap.org/data/2.5/weather?q=London&appid=b232f4b1b189a861b611f935ce62e4ab`
 
     const resWeather = await fetch(
@@ -46,11 +54,11 @@ const getWeatherData = async function () {
     if (!resWeather.ok) throw new Error("Could not get your location weather");
 
     const weatherData = await resWeather.json();
-    console.log(weatherData);
 
     renderWeather(weatherData);
   } catch (err) {
     console.log(err);
+    renderError(err);
   }
 };
 getWeatherData();

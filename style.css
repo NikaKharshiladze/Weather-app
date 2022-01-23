@@ -97,3 +97,8 @@
   padding: 10px;
   border-radius: 30px;
 }
+
+.errMsg {
+  background-color: red;
+  color: white;
+}
