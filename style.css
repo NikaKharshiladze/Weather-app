@@ -2,32 +2,40 @@
 
 :root {
   --main-color: #040720;
-  --background-color: #f2e9e4;
-  --border-color: #c9ada7;
+  --background-color: rgba(179, 179, 179, 0.5);
+  --border-color: #040720;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  /* font-family: "Mochiy Pop P One", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Mochiy Pop P One", sans-serif;
 }
 
 .app-container {
+  height: 100vh;
+  max-width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(30, 142, 216, 0.5),
+    rgba(30, 142, 216, 1)
+  );
 }
 
 .app-name {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
   color: var(--main-color);
   text-transform: uppercase;
+  border-radius: 30px;
+  padding: 5px;
 }
 
 .search-container {
@@ -38,7 +46,7 @@
 }
 
 .search-input {
-  padding: 25px 60px;
+  padding: 25px 40px;
   overflow: scroll;
   outline: none;
   background-color: var(--background-color);
@@ -46,6 +54,7 @@
   border-radius: 30px;
   color: var(--main-color);
   font-size: 1.2rem;
+  text-align: center;
 }
 
 ::placeholder {
@@ -66,8 +75,9 @@
 }
 
 .search-btn:hover {
-  color: #c9ada7;
+  color: black;
   background-color: white;
+  transform: scale(1.1);
 }
 
 .results-container {
@@ -78,11 +88,12 @@
 
 #weather-icon {
   width: 150px;
-  border: 2px solid yellow;
   border-radius: 10px;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 .weather-info {
   color: var(--main-color);
+  padding: 10px;
+  border-radius: 30px;
 }
