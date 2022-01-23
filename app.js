@@ -59,13 +59,14 @@ const getWeatherData = async function () {
 
     renderWeather(weatherData);
 
-    btn.addEventListener("click", async function () {
+    btn.addEventListener("click", async function (e) {
+      e.preventDefault();
       const resWeather = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=b232f4b1b189a861b611f935ce62e4ab`
       );
-      if (!input.value)
-        if (!resWeather.ok)
-          throw new Error("Could not get your location weather");
+      if (!input.value) return;
+      if (!resWeather.ok)
+        throw new Error("Could not get your location weather");
       const weatherData = await resWeather.json();
       console.log(weatherData);
       input.value = "";
