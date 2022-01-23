@@ -16,7 +16,7 @@
 
 .app-container {
   height: 100vh;
-  max-width: auto;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,6 +57,10 @@
   text-align: center;
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
+
 ::placeholder {
   font-size: 1.2em;
   color: var(--main-color);
@@ -87,7 +91,7 @@
 }
 
 #weather-icon {
-  width: 150px;
+  width: 70px;
   border-radius: 10px;
   margin-right: 50px;
 }
@@ -101,4 +105,6 @@
 .errMsg {
   background-color: red;
   color: white;
+  text-align: center;
+  font-size: 10px;
 }
