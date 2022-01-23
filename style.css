@@ -103,7 +103,7 @@ input:focus::placeholder {
 }
 
 .errMsg {
-  background-color: red;
+  background-color: var(--main-color);
   color: white;
   text-align: center;
   font-size: 10px;
