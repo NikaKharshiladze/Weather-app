@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/03_iday.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <h2 class="app-name">Weather App</h2>
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search for cities..."
+        />
+        <button class="search-btn">Search!</button>
+      </div>
+      <div class="results-container">
+        <img id="weather-icon" src="./assets/03_iday.svg" alt="Weather icon" />
+        <div class="weather-info">
+          <h2 class="city-name">Weather in Tbilisi</h2>
+          <h2 class="temperature">51<span>°C</span></h2>
+          <h4 class="weather-type">It's Cloudy Today</h4>
+          <p class="Humidity">Humidity: 60<span>%</span></p>
+          <p class="wind-speed">Wind Speed: 6.2<span>km/h</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

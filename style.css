@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
+:root {
+  --main-color: #040720;
+  --background-color: #f2e9e4;
+  --border-color: #c9ada7;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Mochiy Pop P One", sans-serif; */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.search-input {
+  padding: 25px 60px;
+  overflow: scroll;
+  outline: none;
+  background-color: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+::placeholder {
+  font-size: 1.2em;
+  color: var(--main-color);
+}
+
+.search-btn {
+  font-size: 1.2rem;
+  padding: 15px;
+  margin: 0 10px;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  color: var(--main-color);
+  border: 2px solid var(--border-color);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  color: #c9ada7;
+  background-color: white;
+}
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weather-icon {
+  width: 150px;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  margin-right: 100px;
+}
+
+.weather-info {
+  color: var(--main-color);
+}
